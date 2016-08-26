@@ -1,0 +1,93 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+        classpath('se.transmode.gradle:gradle-docker:1.2')
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'docker'
+apply plugin: 'war'
+
+war {
+    baseName = 'cargo'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    // tag::actuator[]
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    // end::actuator[]
+    testCompile("junit:junit")
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14.1'
+}
+
+task buildSpringBootDocker(type: Docker, dependsOn: build) {
+    push = false
+    applicationName = war.baseName + "-spring-boot"
+    dockerfile = file('src/main/docker/spring-boot')
+    doFirst {
+        copy {
+            from war
+            into stageDir
+        }
+    }
+}
+
+task buildWildFlyDocker(type: Docker, dependsOn: build) {
+    push = false
+    applicationName = war.baseName + "-wildfly"
+    dockerfile = file('src/main/docker/wildfly')
+    doFirst {
+        copy {
+            from war
+            into stageDir
+        }
+    }
+}
+
+task buildLibertyDocker(type: Docker, dependsOn: build) {
+    push = false
+    applicationName = war.baseName + "-liberty"
+    dockerfile = file('src/main/docker/liberty')
+    doFirst {
+        copy {
+            from war
+            into stageDir
+        }
+    }
+}
+
+task buildTomeeDocker(type: Docker, dependsOn: build) {
+    push = false
+    applicationName = war.baseName + "-tomee"
+    dockerfile = file('src/main/docker/tomee')
+    doFirst {
+        copy {
+            from war
+            into stageDir
+        }
+    }
+}
+
+task buildAllDocker {
+    dependsOn tasks.withType(Docker)
+}
