@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Cargo Demo</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      color:<%= settings.var_foreground %>;
+      background-color:<%= settings.var_background %>
+    }
+    .time {
+      font-size: xx-large;
+      width: 50%;
+      height: 50%;
+      overflow: auto;
+      margin: auto;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+    }
+  </style>
+</head>
+<body>
+  <%= yield %>
+</body>
+</html>
