@@ -10,6 +10,6 @@ set :var_foreground, foreground
 set :var_background, background
 
 get '/' do
-  erb :index, :locals => {'timestamp' => Time.now.getutc}
+  erb :index, :locals => {'msg' => 'hello-world', 'timestamp' => Time.now.getutc}
 end
 
