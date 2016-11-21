@@ -1,6 +1,0 @@
-docker {
-    name 'cargo/broomyocymry/hello-flask:latest'
-    tags 'latest'
-    dockerfile 'Dockerfile'
-    pull true
-}

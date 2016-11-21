@@ -7,20 +7,14 @@ Cargo is a collection demo solutions written in a variety of frameworks and lang
 
 Hopefully others can contribute their own ideas building on the existing services or creating new ones!
 
-## Cargo 0: Hello World
-A collection of hello world applications
-* [x] Sinatra
-* [x] Spring Boot
-* [x] Flask
 
-
-## Cargo 1: Team Builder
-The team builder solution use case is to allow team members to maintain and update their skills profile and then use this data in a variety of ways
-* [ ] Authentication Service (using Ratpack)
-* [ ] Profile Service (using Spring Boot + Neo4J)
-* [ ] Profile Viewer (using AngularJS 2)
-* [ ] Team Builder Service (using Flask)
-* [ ] Team Builder Viewer (using React)
+## Cargo 0: Hello World, Around the World
+A collection of hello world applications. The deployment model is chained together to demonstrate Open API (swagger) and zipkin (distributed tracing)
+Inspired by http://helloworldcollection.de/ and http://www.athropolis.com/hello2.htm
+* [x] Hello (using Sinatra)
+* [x] Bonjour (using Spring Boot)
+* [x] Ola (using Flask)
+* [ ] Guten Tag (using Go)
 
 
 ## Benchmarking Tools

@@ -1,0 +1,6 @@
+docker {
+    name 'cargo/broomyocymru/hello:latest'
+    tags 'latest'
+    dockerfile 'Dockerfile'
+    pull true
+}

@@ -1,4 +1,1 @@
-
-
-* Install swagger-codegen
-* Run gradle build
+Use 'gradle docker' to build all the images 

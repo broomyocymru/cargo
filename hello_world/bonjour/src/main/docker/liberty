@@ -1,0 +1,3 @@
+FROM websphere-liberty
+COPY bonjour-1.0.0.war /opt/ibm/wlp/usr/servers/defaultServer/dropins/app.war
+ENV LICENSE accept

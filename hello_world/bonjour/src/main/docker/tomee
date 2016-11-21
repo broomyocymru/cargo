@@ -1,0 +1,2 @@
+FROM tomee:8-jdk-7.0.0-webprofile
+COPY bonjour-1.0.0.war /usr/local/tomee/webapps/app.war
