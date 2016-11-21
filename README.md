@@ -14,7 +14,7 @@ A collection of hello world applications.
 * [x] Bonjour (using Spring Boot)
 * [x] Ola (using Flask)
 * [x] Guten Tag (using Go)
-* [ ] Ciao (using NodeJS)
+* [x] Ciao (using NodeJS)
 
 
 ## Benchmarking Tools
