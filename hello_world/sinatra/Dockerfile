@@ -1,6 +1,6 @@
-FROM ruby:latest
+FROM ruby:alpine
 
-MAINTAINER cargo "https://github.com/broomyocymru/cargo"
+MAINTAINER cargo "https://github.com/broomyocymru/cargo/hello_world/sinatra"
 
 COPY . /app
 WORKDIR /app
