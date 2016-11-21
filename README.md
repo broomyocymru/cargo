@@ -9,7 +9,7 @@ Hopefully others can contribute their own ideas building on the existing service
 
 
 ## Cargo 0: Hello World, Around the World
-A collection of hello world applications.
+A collection of hello world applications built as docker containers using a multi-project gradle build.
 * [x] Hello (using Sinatra)
 * [x] Bonjour (using Spring Boot)
 * [x] Ola (using Flask)
