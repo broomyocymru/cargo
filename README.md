@@ -9,12 +9,12 @@ Hopefully others can contribute their own ideas building on the existing service
 
 
 ## Cargo 0: Hello World, Around the World
-A collection of hello world applications. The deployment model is chained together to demonstrate Open API (swagger) and zipkin (distributed tracing)
-Inspired by http://helloworldcollection.de/ and http://www.athropolis.com/hello2.htm
+A collection of hello world applications.
 * [x] Hello (using Sinatra)
 * [x] Bonjour (using Spring Boot)
 * [x] Ola (using Flask)
-* [ ] Guten Tag (using Go)
+* [x] Guten Tag (using Go)
+* [ ] Ciao (using NodeJS)
 
 
 ## Benchmarking Tools

@@ -1,0 +1,12 @@
+{
+  "name": "ciao",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "main": "ciao.js",
+  "scripts": {
+    "start": "node ciao.js"
+  },
+  "dependencies": {
+  }
+}
