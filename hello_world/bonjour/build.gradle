@@ -26,6 +26,10 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+   compile 'org.springframework:spring-web:4.3.2.RELEASE'
+   compile 'org.springframework.boot:spring-boot:1.4.0.RELEASE'
+   compile 'org.springframework:spring-context:4.3.2.RELEASE'
+   compile 'org.springframework.boot:spring-boot-autoconfigure:1.4.0.RELEASE'
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-actuator")
     testCompile("junit:junit")
